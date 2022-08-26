@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+    <title>Vite App</title>
+    <style>
+      .active {
+        background: black;
+        border-radius: 10px;
+      }
+      .toggle {
+        border: 1px solid black;
+        padding: 15px 6px;
+        width: fit-content;
+      }
+      .navOpen .navButton  {
+        height: 2px;
+        width: 20px;
+        background: #000;
+        transition: all .2s ease-in-out;
+
+      }
+      .navOpen .navButton::before,.navOpen .navButton::after  {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 20px;
+        background: #000;
+        transition: all .5s ease-in-out;
+      }
+      .navOpen .navButton::before {
+        transform: translateY(-7px);
+      }
+      .navOpen .navButton::after {
+        transform: translateY(7px);
+      }
+
+
+      /* animation */
+      .navButton {
+        height: 2px;
+        width: 20px;
+        background: #000;
+        transition: all .2s ease-in-out;
+        background: transparent;
+      }
+      .navButton::before,.navButton::after  {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 20px;
+        background: #000;
+        transition: all .5s ease-in-out;
+      }
+      .navButton::before {
+        transform: rotate(45deg);
+      }
+      .navButton::after {
+        transform: rotate(-45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" class="flex w-screen bg-blue-600 overflow-hidden"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
